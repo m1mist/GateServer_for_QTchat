@@ -1,9 +1,10 @@
 #include "LogicSystem.h"
+#include "HttpConnection.h"
 
 LogicSystem::LogicSystem() {
-	RegisterGet("/get test", [](std::shared_ptr<HttpConnection> connection) {
-		beast::ostream(connection->response_.body()) << "receive get test request";
-		});
+	RegisterGet("/get_test", [](std::shared_ptr<HttpConnection> connection) {
+		beast::ostream(connection->response_.body()) << "receive get_test request";
+	});
 }
 
 LogicSystem::~LogicSystem() {

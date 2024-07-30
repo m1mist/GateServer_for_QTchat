@@ -1,5 +1,5 @@
 #include "HttpConnection.h"
-
+#include "LogicSystem.h"
 HttpConnection::HttpConnection(tcp::socket socket):socket_(std::move(socket)) {}
 
 void HttpConnection::Start() {

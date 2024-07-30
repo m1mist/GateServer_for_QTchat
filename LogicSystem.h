@@ -1,7 +1,7 @@
 #pragma once
 
 #include "global.h"
-#include "HttpConnection.h"
+
 class HttpConnection;
 typedef std::function<void(std::shared_ptr<HttpConnection>)> HttpHandler;
 
