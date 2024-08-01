@@ -1,8 +1,6 @@
 ﻿#include <iostream>
-#include <json/json.h>
-#include <json/value.h>
-#include <json/reader.h>
 #include "CServer.h"
+
 int main() {
     try {
         //设置端口
@@ -18,6 +16,7 @@ int main() {
             ioc.stop();
         });
         std::make_shared<CServer>(ioc, port)->Start();
+        std::cout << "Gate Server listen on port: " << port << std::endl;
         ioc.run();
     }
     catch (std::exception const& e) {
@@ -37,6 +36,3 @@ int main() {
 所以对于get请求带参数的情况我们要实现参数解析，我们可以自己实现简单的url解析函数
 */
 //char 转为16进制
-unsigned char ToHex(unsigned char x) {
-    return  x > 9 ? x + 55 : x + 48;
-}
