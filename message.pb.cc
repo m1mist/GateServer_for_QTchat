@@ -22,7 +22,7 @@ namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
 namespace message {
 
-inline constexpr GetVarifyRsp::Impl_::Impl_(
+inline constexpr GetVerifyRsp::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : email_(
             &::google::protobuf::internal::fixed_address_empty_string,
@@ -34,20 +34,20 @@ inline constexpr GetVarifyRsp::Impl_::Impl_(
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR GetVarifyRsp::GetVarifyRsp(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR GetVerifyRsp::GetVerifyRsp(::_pbi::ConstantInitialized)
     : _impl_(::_pbi::ConstantInitialized()) {}
-struct GetVarifyRspDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetVarifyRspDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetVarifyRspDefaultTypeInternal() {}
+struct GetVerifyRspDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetVerifyRspDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetVerifyRspDefaultTypeInternal() {}
   union {
-    GetVarifyRsp _instance;
+    GetVerifyRsp _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetVarifyRspDefaultTypeInternal _GetVarifyRsp_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetVerifyRspDefaultTypeInternal _GetVerifyRsp_default_instance_;
 
-inline constexpr GetVarifyReq::Impl_::Impl_(
+inline constexpr GetVerifyReq::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : email_(
             &::google::protobuf::internal::fixed_address_empty_string,
@@ -55,18 +55,18 @@ inline constexpr GetVarifyReq::Impl_::Impl_(
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR GetVarifyReq::GetVarifyReq(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR GetVerifyReq::GetVerifyReq(::_pbi::ConstantInitialized)
     : _impl_(::_pbi::ConstantInitialized()) {}
-struct GetVarifyReqDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetVarifyReqDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetVarifyReqDefaultTypeInternal() {}
+struct GetVerifyReqDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetVerifyReqDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetVerifyReqDefaultTypeInternal() {}
   union {
-    GetVarifyReq _instance;
+    GetVerifyReq _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetVarifyReqDefaultTypeInternal _GetVarifyReq_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetVerifyReqDefaultTypeInternal _GetVerifyReq_default_instance_;
 }  // namespace message
 static ::_pb::Metadata file_level_metadata_message_2eproto[2];
 static constexpr const ::_pb::EnumDescriptor**
@@ -76,43 +76,43 @@ static constexpr const ::_pb::ServiceDescriptor**
 const ::uint32_t TableStruct_message_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
     protodesc_cold) = {
     ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::message::GetVarifyReq, _internal_metadata_),
+    PROTOBUF_FIELD_OFFSET(::message::GetVerifyReq, _internal_metadata_),
     ~0u,  // no _extensions_
     ~0u,  // no _oneof_case_
     ~0u,  // no _weak_field_map_
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::message::GetVarifyReq, _impl_.email_),
+    PROTOBUF_FIELD_OFFSET(::message::GetVerifyReq, _impl_.email_),
     ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::message::GetVarifyRsp, _internal_metadata_),
+    PROTOBUF_FIELD_OFFSET(::message::GetVerifyRsp, _internal_metadata_),
     ~0u,  // no _extensions_
     ~0u,  // no _oneof_case_
     ~0u,  // no _weak_field_map_
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::message::GetVarifyRsp, _impl_.error_),
-    PROTOBUF_FIELD_OFFSET(::message::GetVarifyRsp, _impl_.email_),
-    PROTOBUF_FIELD_OFFSET(::message::GetVarifyRsp, _impl_.code_),
+    PROTOBUF_FIELD_OFFSET(::message::GetVerifyRsp, _impl_.error_),
+    PROTOBUF_FIELD_OFFSET(::message::GetVerifyRsp, _impl_.email_),
+    PROTOBUF_FIELD_OFFSET(::message::GetVerifyRsp, _impl_.code_),
 };
 
 static const ::_pbi::MigrationSchema
     schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::message::GetVarifyReq)},
-        {9, -1, -1, sizeof(::message::GetVarifyRsp)},
+        {0, -1, -1, sizeof(::message::GetVerifyReq)},
+        {9, -1, -1, sizeof(::message::GetVerifyRsp)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-    &::message::_GetVarifyReq_default_instance_._instance,
-    &::message::_GetVarifyRsp_default_instance_._instance,
+    &::message::_GetVerifyReq_default_instance_._instance,
+    &::message::_GetVerifyRsp_default_instance_._instance,
 };
 const char descriptor_table_protodef_message_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-    "\n\rmessage.proto\022\007message\"\035\n\014GetVarifyReq"
-    "\022\r\n\005email\030\001 \001(\t\":\n\014GetVarifyRsp\022\r\n\005error"
+    "\n\rmessage.proto\022\007message\"\035\n\014GetVerifyReq"
+    "\022\r\n\005email\030\001 \001(\t\":\n\014GetVerifyRsp\022\r\n\005error"
     "\030\001 \001(\005\022\r\n\005email\030\002 \001(\t\022\014\n\004code\030\003 \001(\t2P\n\rV"
-    "arifyService\022\?\n\rGetVarifyCode\022\025.message."
-    "GetVarifyReq\032\025.message.GetVarifyRsp\"\000b\006p"
+    "erifyService\022\?\n\rGetVerifyCode\022\025.message."
+    "GetVerifyReq\032\025.message.GetVerifyRsp\"\000b\006p"
     "roto3"
 };
 static ::absl::once_flag descriptor_table_message_2eproto_once;
@@ -154,55 +154,55 @@ static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_message_2eproto(&descript
 namespace message {
 // ===================================================================
 
-class GetVarifyReq::_Internal {
+class GetVerifyReq::_Internal {
  public:
 };
 
-GetVarifyReq::GetVarifyReq(::google::protobuf::Arena* arena)
+GetVerifyReq::GetVerifyReq(::google::protobuf::Arena* arena)
     : ::google::protobuf::Message(arena) {
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:message.GetVarifyReq)
+  // @@protoc_insertion_point(arena_constructor:message.GetVerifyReq)
 }
-inline PROTOBUF_NDEBUG_INLINE GetVarifyReq::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE GetVerifyReq::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
       : email_(arena, from.email_),
         _cached_size_{0} {}
 
-GetVarifyReq::GetVarifyReq(
+GetVerifyReq::GetVerifyReq(
     ::google::protobuf::Arena* arena,
-    const GetVarifyReq& from)
+    const GetVerifyReq& from)
     : ::google::protobuf::Message(arena) {
-  GetVarifyReq* const _this = this;
+  GetVerifyReq* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
 
-  // @@protoc_insertion_point(copy_constructor:message.GetVarifyReq)
+  // @@protoc_insertion_point(copy_constructor:message.GetVerifyReq)
 }
-inline PROTOBUF_NDEBUG_INLINE GetVarifyReq::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE GetVerifyReq::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : email_(arena),
         _cached_size_{0} {}
 
-inline void GetVarifyReq::SharedCtor(::_pb::Arena* arena) {
+inline void GetVerifyReq::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-GetVarifyReq::~GetVarifyReq() {
-  // @@protoc_insertion_point(destructor:message.GetVarifyReq)
+GetVerifyReq::~GetVerifyReq() {
+  // @@protoc_insertion_point(destructor:message.GetVerifyReq)
   _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   SharedDtor();
 }
-inline void GetVarifyReq::SharedDtor() {
+inline void GetVerifyReq::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
   _impl_.email_.Destroy();
   _impl_.~Impl_();
 }
 
-PROTOBUF_NOINLINE void GetVarifyReq::Clear() {
-// @@protoc_insertion_point(message_clear_start:message.GetVarifyReq)
+PROTOBUF_NOINLINE void GetVerifyReq::Clear() {
+// @@protoc_insertion_point(message_clear_start:message.GetVerifyReq)
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -212,7 +212,7 @@ PROTOBUF_NOINLINE void GetVarifyReq::Clear() {
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
-const char* GetVarifyReq::_InternalParse(
+const char* GetVerifyReq::_InternalParse(
     const char* ptr, ::_pbi::ParseContext* ctx) {
   ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
   return ptr;
@@ -220,7 +220,7 @@ const char* GetVarifyReq::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 34, 2> GetVarifyReq::_table_ = {
+const ::_pbi::TcParseTable<0, 1, 0, 34, 2> GetVerifyReq::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -231,31 +231,31 @@ const ::_pbi::TcParseTable<0, 1, 0, 34, 2> GetVarifyReq::_table_ = {
     1,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_GetVarifyReq_default_instance_._instance,
+    &_GetVerifyReq_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     // string email = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetVarifyReq, _impl_.email_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetVerifyReq, _impl_.email_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string email = 1;
-    {PROTOBUF_FIELD_OFFSET(GetVarifyReq, _impl_.email_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(GetVerifyReq, _impl_.email_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
     "\24\5\0\0\0\0\0\0"
-    "message.GetVarifyReq"
+    "message.GetVerifyReq"
     "email"
   }},
 };
 
-::uint8_t* GetVarifyReq::_InternalSerialize(
+::uint8_t* GetVerifyReq::_InternalSerialize(
     ::uint8_t* target,
     ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:message.GetVarifyReq)
+  // @@protoc_insertion_point(serialize_to_array_start:message.GetVerifyReq)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -263,7 +263,7 @@ const ::_pbi::TcParseTable<0, 1, 0, 34, 2> GetVarifyReq::_table_ = {
   if (!this->_internal_email().empty()) {
     const std::string& _s = this->_internal_email();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "message.GetVarifyReq.email");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "message.GetVerifyReq.email");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
@@ -272,12 +272,12 @@ const ::_pbi::TcParseTable<0, 1, 0, 34, 2> GetVarifyReq::_table_ = {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:message.GetVarifyReq)
+  // @@protoc_insertion_point(serialize_to_array_end:message.GetVerifyReq)
   return target;
 }
 
-::size_t GetVarifyReq::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:message.GetVarifyReq)
+::size_t GetVerifyReq::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:message.GetVerifyReq)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -293,18 +293,18 @@ const ::_pbi::TcParseTable<0, 1, 0, 34, 2> GetVarifyReq::_table_ = {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData GetVarifyReq::_class_data_ = {
-    GetVarifyReq::MergeImpl,
+const ::google::protobuf::Message::ClassData GetVerifyReq::_class_data_ = {
+    GetVerifyReq::MergeImpl,
     nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData* GetVarifyReq::GetClassData() const {
+const ::google::protobuf::Message::ClassData* GetVerifyReq::GetClassData() const {
   return &_class_data_;
 }
 
-void GetVarifyReq::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
-  auto* const _this = static_cast<GetVarifyReq*>(&to_msg);
-  auto& from = static_cast<const GetVarifyReq&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:message.GetVarifyReq)
+void GetVerifyReq::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+  auto* const _this = static_cast<GetVerifyReq*>(&to_msg);
+  auto& from = static_cast<const GetVerifyReq&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:message.GetVerifyReq)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -315,21 +315,21 @@ void GetVarifyReq::MergeImpl(::google::protobuf::Message& to_msg, const ::google
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void GetVarifyReq::CopyFrom(const GetVarifyReq& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:message.GetVarifyReq)
+void GetVerifyReq::CopyFrom(const GetVerifyReq& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:message.GetVerifyReq)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool GetVarifyReq::IsInitialized() const {
+PROTOBUF_NOINLINE bool GetVerifyReq::IsInitialized() const {
   return true;
 }
 
-::_pbi::CachedSize* GetVarifyReq::AccessCachedSize() const {
+::_pbi::CachedSize* GetVerifyReq::AccessCachedSize() const {
   return &_impl_._cached_size_;
 }
-void GetVarifyReq::InternalSwap(GetVarifyReq* PROTOBUF_RESTRICT other) {
+void GetVerifyReq::InternalSwap(GetVerifyReq* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -337,67 +337,67 @@ void GetVarifyReq::InternalSwap(GetVarifyReq* PROTOBUF_RESTRICT other) {
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.email_, &other->_impl_.email_, arena);
 }
 
-::google::protobuf::Metadata GetVarifyReq::GetMetadata() const {
+::google::protobuf::Metadata GetVerifyReq::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_message_2eproto_getter, &descriptor_table_message_2eproto_once,
       file_level_metadata_message_2eproto[0]);
 }
 // ===================================================================
 
-class GetVarifyRsp::_Internal {
+class GetVerifyRsp::_Internal {
  public:
 };
 
-GetVarifyRsp::GetVarifyRsp(::google::protobuf::Arena* arena)
+GetVerifyRsp::GetVerifyRsp(::google::protobuf::Arena* arena)
     : ::google::protobuf::Message(arena) {
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:message.GetVarifyRsp)
+  // @@protoc_insertion_point(arena_constructor:message.GetVerifyRsp)
 }
-inline PROTOBUF_NDEBUG_INLINE GetVarifyRsp::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE GetVerifyRsp::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
       : email_(arena, from.email_),
         code_(arena, from.code_),
         _cached_size_{0} {}
 
-GetVarifyRsp::GetVarifyRsp(
+GetVerifyRsp::GetVerifyRsp(
     ::google::protobuf::Arena* arena,
-    const GetVarifyRsp& from)
+    const GetVerifyRsp& from)
     : ::google::protobuf::Message(arena) {
-  GetVarifyRsp* const _this = this;
+  GetVerifyRsp* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
   _impl_.error_ = from._impl_.error_;
 
-  // @@protoc_insertion_point(copy_constructor:message.GetVarifyRsp)
+  // @@protoc_insertion_point(copy_constructor:message.GetVerifyRsp)
 }
-inline PROTOBUF_NDEBUG_INLINE GetVarifyRsp::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE GetVerifyRsp::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : email_(arena),
         code_(arena),
         _cached_size_{0} {}
 
-inline void GetVarifyRsp::SharedCtor(::_pb::Arena* arena) {
+inline void GetVerifyRsp::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   _impl_.error_ = {};
 }
-GetVarifyRsp::~GetVarifyRsp() {
-  // @@protoc_insertion_point(destructor:message.GetVarifyRsp)
+GetVerifyRsp::~GetVerifyRsp() {
+  // @@protoc_insertion_point(destructor:message.GetVerifyRsp)
   _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   SharedDtor();
 }
-inline void GetVarifyRsp::SharedDtor() {
+inline void GetVerifyRsp::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
   _impl_.email_.Destroy();
   _impl_.code_.Destroy();
   _impl_.~Impl_();
 }
 
-PROTOBUF_NOINLINE void GetVarifyRsp::Clear() {
-// @@protoc_insertion_point(message_clear_start:message.GetVarifyRsp)
+PROTOBUF_NOINLINE void GetVerifyRsp::Clear() {
+// @@protoc_insertion_point(message_clear_start:message.GetVerifyRsp)
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -409,7 +409,7 @@ PROTOBUF_NOINLINE void GetVarifyRsp::Clear() {
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
-const char* GetVarifyRsp::_InternalParse(
+const char* GetVerifyRsp::_InternalParse(
     const char* ptr, ::_pbi::ParseContext* ctx) {
   ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
   return ptr;
@@ -417,7 +417,7 @@ const char* GetVarifyRsp::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 38, 2> GetVarifyRsp::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 38, 2> GetVerifyRsp::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -428,45 +428,45 @@ const ::_pbi::TcParseTable<2, 3, 0, 38, 2> GetVarifyRsp::_table_ = {
     3,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_GetVarifyRsp_default_instance_._instance,
+    &_GetVerifyRsp_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
     // int32 error = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GetVarifyRsp, _impl_.error_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(GetVarifyRsp, _impl_.error_)}},
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GetVerifyRsp, _impl_.error_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(GetVerifyRsp, _impl_.error_)}},
     // string email = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(GetVarifyRsp, _impl_.email_)}},
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(GetVerifyRsp, _impl_.email_)}},
     // string code = 3;
     {::_pbi::TcParser::FastUS1,
-     {26, 63, 0, PROTOBUF_FIELD_OFFSET(GetVarifyRsp, _impl_.code_)}},
+     {26, 63, 0, PROTOBUF_FIELD_OFFSET(GetVerifyRsp, _impl_.code_)}},
   }}, {{
     65535, 65535
   }}, {{
     // int32 error = 1;
-    {PROTOBUF_FIELD_OFFSET(GetVarifyRsp, _impl_.error_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(GetVerifyRsp, _impl_.error_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
     // string email = 2;
-    {PROTOBUF_FIELD_OFFSET(GetVarifyRsp, _impl_.email_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(GetVerifyRsp, _impl_.email_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string code = 3;
-    {PROTOBUF_FIELD_OFFSET(GetVarifyRsp, _impl_.code_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(GetVerifyRsp, _impl_.code_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
     "\24\0\5\4\0\0\0\0"
-    "message.GetVarifyRsp"
+    "message.GetVerifyRsp"
     "email"
     "code"
   }},
 };
 
-::uint8_t* GetVarifyRsp::_InternalSerialize(
+::uint8_t* GetVerifyRsp::_InternalSerialize(
     ::uint8_t* target,
     ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:message.GetVarifyRsp)
+  // @@protoc_insertion_point(serialize_to_array_start:message.GetVerifyRsp)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -481,7 +481,7 @@ const ::_pbi::TcParseTable<2, 3, 0, 38, 2> GetVarifyRsp::_table_ = {
   if (!this->_internal_email().empty()) {
     const std::string& _s = this->_internal_email();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "message.GetVarifyRsp.email");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "message.GetVerifyRsp.email");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
@@ -489,7 +489,7 @@ const ::_pbi::TcParseTable<2, 3, 0, 38, 2> GetVarifyRsp::_table_ = {
   if (!this->_internal_code().empty()) {
     const std::string& _s = this->_internal_code();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "message.GetVarifyRsp.code");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "message.GetVerifyRsp.code");
     target = stream->WriteStringMaybeAliased(3, _s, target);
   }
 
@@ -498,12 +498,12 @@ const ::_pbi::TcParseTable<2, 3, 0, 38, 2> GetVarifyRsp::_table_ = {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:message.GetVarifyRsp)
+  // @@protoc_insertion_point(serialize_to_array_end:message.GetVerifyRsp)
   return target;
 }
 
-::size_t GetVarifyRsp::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:message.GetVarifyRsp)
+::size_t GetVerifyRsp::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:message.GetVerifyRsp)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -531,18 +531,18 @@ const ::_pbi::TcParseTable<2, 3, 0, 38, 2> GetVarifyRsp::_table_ = {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData GetVarifyRsp::_class_data_ = {
-    GetVarifyRsp::MergeImpl,
+const ::google::protobuf::Message::ClassData GetVerifyRsp::_class_data_ = {
+    GetVerifyRsp::MergeImpl,
     nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData* GetVarifyRsp::GetClassData() const {
+const ::google::protobuf::Message::ClassData* GetVerifyRsp::GetClassData() const {
   return &_class_data_;
 }
 
-void GetVarifyRsp::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
-  auto* const _this = static_cast<GetVarifyRsp*>(&to_msg);
-  auto& from = static_cast<const GetVarifyRsp&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:message.GetVarifyRsp)
+void GetVerifyRsp::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+  auto* const _this = static_cast<GetVerifyRsp*>(&to_msg);
+  auto& from = static_cast<const GetVerifyRsp&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:message.GetVerifyRsp)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -559,21 +559,21 @@ void GetVarifyRsp::MergeImpl(::google::protobuf::Message& to_msg, const ::google
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void GetVarifyRsp::CopyFrom(const GetVarifyRsp& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:message.GetVarifyRsp)
+void GetVerifyRsp::CopyFrom(const GetVerifyRsp& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:message.GetVerifyRsp)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool GetVarifyRsp::IsInitialized() const {
+PROTOBUF_NOINLINE bool GetVerifyRsp::IsInitialized() const {
   return true;
 }
 
-::_pbi::CachedSize* GetVarifyRsp::AccessCachedSize() const {
+::_pbi::CachedSize* GetVerifyRsp::AccessCachedSize() const {
   return &_impl_._cached_size_;
 }
-void GetVarifyRsp::InternalSwap(GetVarifyRsp* PROTOBUF_RESTRICT other) {
+void GetVerifyRsp::InternalSwap(GetVerifyRsp* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -583,7 +583,7 @@ void GetVarifyRsp::InternalSwap(GetVarifyRsp* PROTOBUF_RESTRICT other) {
         swap(_impl_.error_, other->_impl_.error_);
 }
 
-::google::protobuf::Metadata GetVarifyRsp::GetMetadata() const {
+::google::protobuf::Metadata GetVerifyRsp::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_message_2eproto_getter, &descriptor_table_message_2eproto_once,
       file_level_metadata_message_2eproto[1]);
