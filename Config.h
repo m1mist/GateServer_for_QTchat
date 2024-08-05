@@ -13,6 +13,7 @@ struct Section {
 			return *this;
 		}
 		this->datas = other.datas;
+		return *this;
 	}
 
 	std::string operator[](const std::string& key) {
@@ -35,6 +36,7 @@ public:
 			return *this;
 		}
 		config_map_ = other.config_map_;
+		return *this;
 	};
 
 	~Config() {

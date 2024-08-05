@@ -19,7 +19,7 @@ std::string UrlEncode(const std::string& str) {
     size_t length = str.length();
     for (size_t i = 0; i < length; i++) {
         //判断是否仅有数字和字母构成
-        if (isalnum((unsigned char)str[i]) ||
+        if (isalnum(static_cast<unsigned char>(str[i])) ||
             (str[i] == '-') ||
             (str[i] == '_') ||
             (str[i] == '.') ||
@@ -30,8 +30,8 @@ std::string UrlEncode(const std::string& str) {
         else {
             //其他字符需要提前加%并且高四位和低四位分别转为16进制
             strTemp += '%';
-            strTemp += ToHex((unsigned char)str[i] >> 4);
-            strTemp += ToHex((unsigned char)str[i] & 0x0F);
+            strTemp += ToHex(static_cast<unsigned char>(str[i]) >> 4);
+            strTemp += ToHex(static_cast<unsigned char>(str[i]) & 0x0F);
         }
     }
     return strTemp;
@@ -46,8 +46,8 @@ std::string UrlDecode(const std::string& str) {
         //遇到%将后面的两个字符从16进制转为char再拼接
         else if (str[i] == '%') {
             assert(i + 2 < length);
-            unsigned char high = FromHex((unsigned char)str[++i]);
-            unsigned char low = FromHex((unsigned char)str[++i]);
+            unsigned char high = FromHex(static_cast<unsigned char>(str[++i]));
+            unsigned char low = FromHex(static_cast<unsigned char>(str[++i]));
             strTemp += high * 16 + low;
         }
         else strTemp += str[i];
@@ -63,7 +63,7 @@ void HttpConnection::Start() {
 	http::async_read(socket_, buffer_, request_, [self](::beast::error_code err_code,::std::size_t bytes_transferred) {
 		try {
 			if (err_code) {
-				std::cout << "http read error is " << err_code.what() << std::endl;
+				std::cout << "http read error is " << err_code.what() << '\n';
 				return;
 			}
 			boost::ignore_unused(bytes_transferred);
@@ -71,7 +71,7 @@ void HttpConnection::Start() {
 			self->DetectTimeout();
 		}
 		catch (const std::exception& ex) {
-			std::cout << "exception is " << ex.what() << std::endl;
+			std::cout << "exception is " << ex.what() << '\n';
 		}
 	});
 }

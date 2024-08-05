@@ -1,7 +1,7 @@
 #include "CServer.h"
 #include "HttpConnection.h"
-CServer::CServer(net::io_context& io_context, unsigned short& port):
-	io_context_(io_context), acceptor_(io_context, tcp::endpoint(tcp::v4(),port)), socket_(io_context){
+CServer::CServer(net::io_context& io_context, const unsigned short& port):
+	acceptor_(io_context, tcp::endpoint(tcp::v4(),port)), io_context_(io_context), socket_(io_context){
 
 }
 
@@ -21,7 +21,7 @@ void CServer::Start(){
 			self->Start();
 		}
 		catch (const std::exception& ex){
-			std::cout << "exception is " << ex.what() << std::endl;
+			std::cout << "exception is " << ex.what() << '\n';
 		}
 	});
 }
