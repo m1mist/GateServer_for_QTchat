@@ -1,56 +1,27 @@
 #pragma once
 #include "global.h"
 struct Section {
-	Section() {};
-	~Section() { datas.clear(); };
+	Section() = default;
+	~Section();
 
-	Section(const Section& other) {
-		datas = other.datas;
-	}
+	Section(const Section& other);
+	Section& operator=(const Section& other);
 
-	Section& operator=(const Section& other) {
-		if (&other == this) {
-			return *this;
-		}
-		this->datas = other.datas;
-		return *this;
-	}
-
-	std::string operator[](const std::string& key) {
-		if (datas.find(key) == datas.end()) {
-			return "";
-		}
-		return datas[key];
-	}
+	std::string operator[](const std::string& key);
 
 	std::map<std::string, std::string> datas;
 };
 class Config {
 public:
-	Config();
+	Config(const Config& other);
+	Config& operator=(const Config& other);
+	~Config();
 
-	Config(const Config& other) { config_map_ = other.config_map_; };
+	static Config& Instance();
+	Section operator[](const std::string& section);
 
-	Config& operator=(const Config& other) {
-		if (&other == this) {
-			return *this;
-		}
-		config_map_ = other.config_map_;
-		return *this;
-	};
-
-	~Config() {
-		config_map_.clear();
-	}
-
-	Section operator[](const std::string& section) {
-		if (config_map_.find(section) == config_map_.end()) {
-			return Section();
-		}
-		return config_map_[section];
-	};
 private:
-
+	Config();
 	std::map<std::string, Section> config_map_;
 };
 

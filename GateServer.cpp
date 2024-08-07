@@ -2,8 +2,8 @@
 #include "Config.h"
 
 int main() {
-    Config gCfg;
-    std::string gate_port_str = gCfg["GateServer"]["Port"];
+    auto& g_cfg = Config::Instance();
+    std::string gate_port_str = g_cfg["GateServer"]["Port"];
     unsigned short gate_port = atoi(gate_port_str.c_str());
     try {
         //设置端口

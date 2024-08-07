@@ -6,8 +6,8 @@ class HttpConnection;
 typedef std::function<void(std::shared_ptr<HttpConnection>)> HttpHandler;
 
 class LogicSystem :public Singleton<LogicSystem> {
-    friend class Singleton<LogicSystem>;
 public:
+    friend class Singleton<LogicSystem>;
     ~LogicSystem();
     bool HandleGet(const std::string&, std::shared_ptr<HttpConnection>);
     bool HandlePost(const std::string&, std::shared_ptr<HttpConnection>);

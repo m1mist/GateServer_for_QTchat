@@ -56,7 +56,7 @@ std::string UrlDecode(const std::string& str) {
 }
 
 
-HttpConnection::HttpConnection(tcp::socket socket):socket_(std::move(socket)) {}
+HttpConnection::HttpConnection(net::io_context& io_context):socket_(io_context) {}
 
 void HttpConnection::Start() {
 	auto self = shared_from_this();
@@ -74,6 +74,10 @@ void HttpConnection::Start() {
 			std::cout << "exception is " << ex.what() << '\n';
 		}
 	});
+}
+
+tcp::socket& HttpConnection::GetSocket() {
+	return socket_;
 }
 
 void HttpConnection::DetectTimeout() {

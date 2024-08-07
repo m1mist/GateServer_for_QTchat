@@ -6,9 +6,10 @@ LogicSystem::LogicSystem() {
 	RegisterGet("/get_test", [](const std::shared_ptr<HttpConnection>& connection) {
 		beast::ostream(connection->response_.body()) << "receive get_test request\n";
 		int i = 0;
-		for (auto& elem : connection->get_params_) {
+		for (auto& [fst, snd] : connection->get_params_) {
 			i++;
-			beast::ostream(connection->response_.body()) << "param " << i << ": key is " << elem.first <<", "<< " value is " << elem.second << " " << '\n';
+			beast::ostream(connection->response_.body()) << "param " << i << ": key is " << fst <<", "
+																  << "value is " << snd << " " << '\n';
 		}
 	});
 	RegisterPost("/verify_code", [](const std::shared_ptr<HttpConnection>& connection) {

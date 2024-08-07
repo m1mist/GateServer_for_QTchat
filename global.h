@@ -1,4 +1,6 @@
 #pragma once
+#include "singleton.h"
+
 #include <boost/beast/http.hpp>
 #include <boost/beast.hpp>
 #include <boost/asio.hpp>
@@ -16,7 +18,7 @@
 #include <json/value.h>
 #include <json/reader.h>
 
-#include "singleton.h"
+
 
 //¼ò»¯ÃüÃû¿Õ¼ä
 namespace beast = boost::beast;         // from <boost/beast.hpp>

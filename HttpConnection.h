@@ -9,8 +9,9 @@ std::string UrlDecode(const std::string& str);
 class HttpConnection:public std::enable_shared_from_this<HttpConnection>{
 public:
 	friend class LogicSystem;
-	explicit HttpConnection(tcp::socket socket);
+	explicit HttpConnection(net::io_context& io_context);
 	void Start();
+	tcp::socket& GetSocket();
 private:
 	void DetectTimeout();	 //³¬Ê±¼ì²â
 	void Response();
