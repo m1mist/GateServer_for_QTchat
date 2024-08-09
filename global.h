@@ -13,12 +13,13 @@
 #include <functional>
 #include <map>
 #include <unordered_map>
+#include <queue>
 
 #include <json/json.h>
 #include <json/value.h>
 #include <json/reader.h>
 
-
+#include <hiredis/hiredis.h>
 
 //¼ò»¯ÃüÃû¿Õ¼ä
 namespace beast = boost::beast;         // from <boost/beast.hpp>

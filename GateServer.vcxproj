@@ -142,6 +142,8 @@
     <ClCompile Include="LogicSystem.cpp" />
     <ClCompile Include="message.grpc.pb.cc" />
     <ClCompile Include="message.pb.cc" />
+    <ClCompile Include="RedisConnectPool.cpp" />
+    <ClCompile Include="RedisManager.cpp" />
     <ClCompile Include="VerifyGrpcClient.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +155,8 @@
     <ClInclude Include="LogicSystem.h" />
     <ClInclude Include="message.grpc.pb.h" />
     <ClInclude Include="message.pb.h" />
+    <ClInclude Include="RedisConnectPool.h" />
+    <ClInclude Include="RedisManager.h" />
     <ClInclude Include="singleton.h" />
     <ClInclude Include="VerifyGrpcClient.h" />
   </ItemGroup>
