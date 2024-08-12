@@ -28,8 +28,12 @@ namespace net = boost::asio;            // from <boost/asio.hpp>
 using tcp = boost::asio::ip::tcp;       // from <boost/asio/ip/tcp.hpp>
 
 enum ErrorCodes {
-	SUCCESS = 0,
-	ERROR_JSON = 1001,
-	RPC_FAILED = 1002,
+	SUCCESS =			0,
+	ERROR_JSON =		1001,
+	RPC_FAILED =		1002,
+	VERIFY_EXPIRED =	1003,
+	VERIFY_CODE_ERROR = 1004,
+	USER_EXISTS =		1005,
 };
 
+constexpr auto code_prefix = "code_";

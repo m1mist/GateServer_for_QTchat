@@ -1,7 +1,7 @@
 #include "RedisConnectPool.h"
 RedisConnectPool::RedisConnectPool(size_t pool_size, const char* host, int port, const char* pwd):
-	b_stop_(false), poolSize_(pool_size), host_(host), port_(port) {
-	for (size_t i = 0; i < poolSize_; ++i) {
+	b_stop_(false), pool_size_(pool_size), host_(host), port_(port) {
+	for (size_t i = 0; i < pool_size_; ++i) {
 		auto* context = redisConnect(host, port);
 		if (context == nullptr || context->err != 0) {
 			if (context != nullptr) {

@@ -18,7 +18,7 @@ public:
 
 private:
 	std::atomic<bool> b_stop_;
-	size_t poolSize_;
+	size_t pool_size_;
 	const char* host_;
 	int port_;
 	std::queue<redisContext*> connections_;
