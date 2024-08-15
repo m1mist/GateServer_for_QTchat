@@ -48,6 +48,15 @@
     <ClCompile Include="RedisConnectPool.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="MysqlDAO.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MysqlPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MysqlManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CServer.h">
@@ -84,6 +93,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="RedisConnectPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MysqlDAO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MysqlPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MysqlManager.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

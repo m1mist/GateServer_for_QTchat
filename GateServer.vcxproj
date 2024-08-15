@@ -70,8 +70,15 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>E:\workspace\software\mysql-connector-c++-9.0.0-winx64-debug\mysql-connector-c++-9.0.0-winx64\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\workspace\software\mysql-connector-c++-9.0.0-winx64-debug\mysql-connector-c++-9.0.0-winx64\lib64\vs14;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <VcpkgUseStatic>false</VcpkgUseStatic>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnableManifest>false</VcpkgEnableManifest>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -115,7 +122,16 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>
       </IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>"E:\workspace\software\mysql-connector-c++-9.0.0-winx64-debug\mysql-connector-c++-9.0.0-winx64\lib64\debug\vs14\mysqlcppconnx.lib";"E:\workspace\software\mysql-connector-c++-9.0.0-winx64-debug\mysql-connector-c++-9.0.0-winx64\lib64\debug\vs14\mysqlcppconn.lib"</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -142,6 +158,9 @@
     <ClCompile Include="LogicSystem.cpp" />
     <ClCompile Include="message.grpc.pb.cc" />
     <ClCompile Include="message.pb.cc" />
+    <ClCompile Include="MysqlDAO.cpp" />
+    <ClCompile Include="MysqlManager.cpp" />
+    <ClCompile Include="MysqlPool.cpp" />
     <ClCompile Include="RedisConnectPool.cpp" />
     <ClCompile Include="RedisManager.cpp" />
     <ClCompile Include="VerifyGrpcClient.cpp" />
@@ -155,6 +174,9 @@
     <ClInclude Include="LogicSystem.h" />
     <ClInclude Include="message.grpc.pb.h" />
     <ClInclude Include="message.pb.h" />
+    <ClInclude Include="MysqlDAO.h" />
+    <ClInclude Include="MysqlManager.h" />
+    <ClInclude Include="MysqlPool.h" />
     <ClInclude Include="RedisConnectPool.h" />
     <ClInclude Include="RedisManager.h" />
     <ClInclude Include="singleton.h" />
@@ -165,6 +187,5 @@
     <None Include="message.proto" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
 </Project>

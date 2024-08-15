@@ -27,7 +27,7 @@ void TestRedisMgr() {
     RedisManager::GetInstance()->Close();
 }
 int main() {
-	TestRedisMgr()  ;
+	//TestRedisMgr()  ;
     auto& g_cfg = Config::Instance();
     std::string gate_port_str = g_cfg["GateServer"]["Port"];
     unsigned short gate_port = atoi(gate_port_str.c_str());
