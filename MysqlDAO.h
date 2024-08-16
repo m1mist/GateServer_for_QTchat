@@ -12,7 +12,7 @@ class MysqlDAO {
 public:
 	MysqlDAO();
 	~MysqlDAO();
-	int RegUser(const std::string& name, const std::string& email, const std::string& pwd);
+	int RegUser(const std::string& name, const std::string& email, const std::string& passwd);
 	int RegUserTransaction(const std::string& name, const std::string& email, const std::string& passwd, const std::string& icon);
 	bool CheckEmail(const std::string& name, const std::string& email);
 	bool UpdatePasswd(const std::string& name, const std::string& new_passwd);

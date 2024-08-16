@@ -125,8 +125,7 @@
       <AdditionalDependencies>"E:\workspace\software\mysql-connector-c++-9.0.0-winx64-debug\mysql-connector-c++-9.0.0-winx64\lib64\debug\vs14\mysqlcppconnx.lib";"E:\workspace\software\mysql-connector-c++-9.0.0-winx64-debug\mysql-connector-c++-9.0.0-winx64\lib64\debug\vs14\mysqlcppconn.lib"</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>xcopy $(ProjectDir)*.dll   $(SolutionDir)$(Platform)\$(Configuration)\   /y</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>
