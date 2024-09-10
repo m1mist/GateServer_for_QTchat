@@ -53,14 +53,74 @@ int MysqlDAO::RegUser(const std::string& name, const std::string& email, const s
 //
 //}
 //
-//bool MysqlDAO::CheckEmail(const std::string& name, const std::string& email) {
-//	
-//}
-//
-//bool MysqlDAO::UpdatePasswd(const std::string& name, const std::string& new_passwd) {
-//	
-//}
-//
+bool MysqlDAO::CheckEmail(const std::string& name, const std::string& email) {
+		auto con = pool_->GetConnection();
+	try {
+		if (con == nullptr) {
+			pool_->Recycle(std::move(con));
+			return false;
+		}
+
+		// 准备查询语句
+		std::unique_ptr<sql::PreparedStatement> pstmt(con->connection->prepareStatement("SELECT email FROM user WHERE name = ?"));
+
+		// 绑定参数
+		pstmt->setString(1, name);
+
+		// 执行查询
+		std::unique_ptr<sql::ResultSet> res(pstmt->executeQuery());
+
+		// 遍历结果集
+		while (res->next()) {
+			std::cout << "Check Email: " << res->getString("email") << '\n';
+			if (email != res->getString("email")) {
+				pool_->Recycle(std::move(con));
+				return false;
+			}
+			pool_->Recycle(std::move(con));
+			return true;
+		}
+	}
+	catch (sql::SQLException& e) {
+		pool_->Recycle(std::move(con));
+		std::cerr << "SQLException: " << e.what();
+		std::cerr << " (MySQL error code: " << e.getErrorCode();
+		std::cerr << ", SQLState: " << e.getSQLState() << " )" << '\n';
+		return false;
+	}
+}
+
+bool MysqlDAO::UpdatePasswd(const std::string& name, const std::string& new_passwd) {
+		auto con = pool_->GetConnection();
+	try {
+		if (con == nullptr) {
+			pool_->Recycle(std::move(con));
+			return false;
+		}
+
+		// 准备查询语句
+		std::unique_ptr<sql::PreparedStatement> pstmt(con->connection->prepareStatement("UPDATE user SET passwd = ? WHERE name = ?"));
+
+		// 绑定参数
+		pstmt->setString(2, name);
+		pstmt->setString(1, new_passwd);
+
+		// 执行更新
+		int updateCount = pstmt->executeUpdate();
+
+		std::cout << "Updated rows: " << updateCount << '\n';
+		pool_->Recycle(std::move(con));
+		return true;
+	}
+	catch (sql::SQLException& e) {
+		pool_->Recycle(std::move(con));
+		std::cerr << "SQLException: " << e.what();
+		std::cerr << " (MySQL error code: " << e.getErrorCode();
+		std::cerr << ", SQLState: " << e.getSQLState() << " )" << '\n';
+		return false;
+	}
+}
+
 //bool MysqlDAO::CheckPasswd(const std::string& name, const std::string& pwd, UserInfo& user_info) {
 //	return false;
 //}

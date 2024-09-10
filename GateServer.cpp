@@ -9,7 +9,7 @@ void TestMysqlMgr() {
 	std::cout << "id  is " << id << std::endl;
 }
 int main() {
-	TestMysqlMgr()  ;
+	//TestMysqlMgr()  ;
 	MysqlManager::GetInstance();
 	RedisManager::GetInstance();
     auto& g_cfg = Config::Instance();
